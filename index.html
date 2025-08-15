@@ -1,665 +1,896 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Trees, Save Earth - Tree Plantation Initiative by Rajendra Kulkarni</title>
-    <meta name="description" content="Join our tree plantation initiative by Rajendra Kulkarni to combat climate change and create a greener future. Learn about the importance of trees and how you can contribute.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Plant Trees, Save Earth - Tree Plantation Initiative by Rajendra Kulkarni
+    </title>
+    <meta
+      name="description"
+      content="Join our tree plantation initiative by Rajendra Kulkarni to combat climate change and create a greener future. Learn about the importance of trees and how you can contribute."
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+      }
 
-        /* Header Styles */
-        .header {
-            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 50%, #6b8e23 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
+      /* Header Styles */
+      .header {
+        background: linear-gradient(
+          135deg,
+          #2d5a27 0%,
+          #4a7c59 50%,
+          #6b8e23 100%
+        );
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
 
+      .nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo i {
+        font-size: 2rem;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+      }
+
+      .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%232d5a27;stop-opacity:1" /><stop offset="100%" style="stop-color:%234a7c59;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="600" fill="url(%23a)"/><circle cx="200" cy="400" r="80" fill="%236b8e23" opacity="0.3"/><circle cx="1000" cy="200" r="120" fill="%232d5a27" opacity="0.2"/><circle cx="800" cy="500" r="60" fill="%234a7c59" opacity="0.3"/></svg>');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 80px;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        padding: 2rem;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(45deg, #4caf50, #45a049);
+        color: white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        animation: fadeInUp 1s ease-out 0.6s both;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+      }
+
+      /* Main Content */
+      .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 5rem;
+      }
+
+      .section h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #2d5a27;
+        position: relative;
+      }
+
+      .section h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(45deg, #4caf50, #45a049);
+        border-radius: 2px;
+      }
+
+      /* Benefits Section */
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .benefit-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid #e0e0e0;
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .benefit-card i {
+        font-size: 3rem;
+        color: #4caf50;
+        margin-bottom: 1rem;
+      }
+
+      .benefit-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #2d5a27;
+      }
+
+      /* Statistics Section */
+      .stats-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 4rem 0;
+        margin: 4rem 0;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .stat-item {
+        padding: 1rem;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #4caf50;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      /* How to Help Section */
+      .help-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .help-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid #e0e0e0;
+      }
+
+      .help-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .help-card i {
+        font-size: 2.5rem;
+        color: #4caf50;
+        margin-bottom: 1rem;
+      }
+
+      /* Contact Form */
+      .contact-form {
+        background: white;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #2d5a27;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #4caf50;
+      }
+
+      .submit-btn {
+        background: linear-gradient(45deg, #4caf50, #45a049);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+      }
+
+      /* Footer */
+      .footer {
+        background: #2d5a27;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 4rem;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #4caf50;
+        transform: translateY(-2px);
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
         .nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo i {
-            font-size: 2rem;
+          flex-direction: column;
+          gap: 1rem;
         }
 
         .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-        }
-
-        .nav-links a:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%232d5a27;stop-opacity:1" /><stop offset="100%" style="stop-color:%234a7c59;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="600" fill="url(%23a)"/><circle cx="200" cy="400" r="80" fill="%236b8e23" opacity="0.3"/><circle cx="1000" cy="200" r="120" fill="%232d5a27" opacity="0.2"/><circle cx="800" cy="500" r="60" fill="%234a7c59" opacity="0.3"/></svg>');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            margin-top: 80px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
+          flex-direction: column;
+          gap: 1rem;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            animation: fadeInUp 1s ease-out;
+          font-size: 2.5rem;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.3s both;
+          font-size: 1.1rem;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-        }
-
-        /* Main Content */
         .main-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section {
-            margin-bottom: 5rem;
+          padding: 2rem 1rem;
         }
 
         .section h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #2d5a27;
-            position: relative;
+          font-size: 2rem;
         }
 
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            border-radius: 2px;
-        }
-
-        /* Benefits Section */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #e0e0e0;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .benefit-card i {
-            font-size: 3rem;
-            color: #4CAF50;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2d5a27;
-        }
-
-        /* Statistics Section */
-        .stats-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 4rem 0;
-            margin: 4rem 0;
+        .benefits-grid,
+        .help-grid {
+          grid-template-columns: 1fr;
         }
 
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 2rem;
         }
 
-        .stat-item {
-            padding: 1rem;
+        .stats-grid {
+          grid-template-columns: 1fr;
         }
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #4CAF50;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #666;
-        }
-
-        /* How to Help Section */
-        .help-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .help-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #e0e0e0;
-        }
-
-        .help-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .help-card i {
-            font-size: 2.5rem;
-            color: #4CAF50;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Form */
         .contact-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 0 auto;
+          padding: 2rem 1rem;
         }
+      }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
+      /* Scroll animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #2d5a27;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #4CAF50;
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-        }
-
-        /* Footer */
-        .footer {
-            background: #2d5a27;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #4CAF50;
-            transform: translateY(-2px);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .main-content {
-                padding: 2rem 1rem;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-            }
-
-            .benefits-grid,
-            .help-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form {
-                padding: 2rem 1rem;
-            }
-        }
-
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script type="text/javascript" id="vwoCode">
+      window._vwo_code ||
+        (function () {
+          var account_id = 32000042,
+            version = 2.1,
+            settings_tolerance = 2000,
+            hide_element = "body",
+            hide_element_style =
+              "opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important;",
+            /* DO NOT EDIT BELOW THIS LINE */
+            f = false,
+            w = window,
+            d = document,
+            v = d.querySelector("#vwoCode"),
+            cK = "_vwo_" + account_id + "_settings",
+            cc = {};
+          try {
+            var c = JSON.parse(
+              localStorage.getItem("_vwo_" + account_id + "_config")
+            );
+            cc = c && typeof c === "object" ? c : {};
+          } catch (e) {}
+          var stT = cc.stT === "session" ? w.sessionStorage : w.localStorage;
+          code = {
+            nonce: v && v.nonce,
+            library_tolerance: function () {
+              return typeof library_tolerance !== "undefined"
+                ? library_tolerance
+                : undefined;
+            },
+            settings_tolerance: function () {
+              return cc.sT || settings_tolerance;
+            },
+            hide_element_style: function () {
+              return "{" + (cc.hES || hide_element_style) + "}";
+            },
+            hide_element: function () {
+              if (performance.getEntriesByName("first-contentful-paint")[0]) {
+                return "";
+              }
+              return typeof cc.hE === "string" ? cc.hE : hide_element;
+            },
+            getVersion: function () {
+              return version;
+            },
+            finish: function (e) {
+              if (!f) {
+                f = true;
+                var t = d.getElementById("_vis_opt_path_hides");
+                if (t) t.parentNode.removeChild(t);
+                if (e)
+                  new Image().src =
+                    "https://dev.visualwebsiteoptimizer.com/ee.gif?a=" +
+                    account_id +
+                    e;
+              }
+            },
+            finished: function () {
+              return f;
+            },
+            addScript: function (e) {
+              var t = d.createElement("script");
+              t.type = "text/javascript";
+              if (e.src) {
+                t.src = e.src;
+              } else {
+                t.text = e.text;
+              }
+              v && t.setAttribute("nonce", v.nonce);
+              d.getElementsByTagName("head")[0].appendChild(t);
+            },
+            load: function (e, t) {
+              var n = this.getSettings(),
+                i = d.createElement("script"),
+                r = this;
+              t = t || {};
+              if (n) {
+                i.textContent = n;
+                d.getElementsByTagName("head")[0].appendChild(i);
+                if (!w.VWO || VWO.caE) {
+                  stT.removeItem(cK);
+                  r.load(e);
+                }
+              } else {
+                var o = new XMLHttpRequest();
+                o.open("GET", e, true);
+                o.withCredentials = !t.dSC;
+                o.responseType = t.responseType || "text";
+                o.onload = function () {
+                  if (t.onloadCb) {
+                    return t.onloadCb(o, e);
+                  }
+                  if (o.status === 200 || o.status === 304) {
+                    _vwo_code.addScript({ text: o.responseText });
+                  } else {
+                    _vwo_code.finish("&e=loading_failure:" + e);
+                  }
+                };
+                o.onerror = function () {
+                  if (t.onerrorCb) {
+                    return t.onerrorCb(e);
+                  }
+                  _vwo_code.finish("&e=loading_failure:" + e);
+                };
+                o.send();
+              }
+            },
+            getSettings: function () {
+              try {
+                var e = stT.getItem(cK);
+                if (!e) {
+                  return;
+                }
+                e = JSON.parse(e);
+                if (Date.now() > e.e) {
+                  stT.removeItem(cK);
+                  return;
+                }
+                return e.s;
+              } catch (e) {
+                return;
+              }
+            },
+            init: function () {
+              if (d.URL.indexOf("__vwo_disable__") > -1) return;
+              var e = this.settings_tolerance();
+              w._vwo_settings_timer = setTimeout(function () {
+                _vwo_code.finish();
+                stT.removeItem(cK);
+              }, e);
+              var t;
+              if (this.hide_element() !== "body") {
+                t = d.createElement("style");
+                var n = this.hide_element(),
+                  i = n ? n + this.hide_element_style() : "",
+                  r = d.getElementsByTagName("head")[0];
+                t.setAttribute("id", "_vis_opt_path_hides");
+                v && t.setAttribute("nonce", v.nonce);
+                t.setAttribute("type", "text/css");
+                if (t.styleSheet) t.styleSheet.cssText = i;
+                else t.appendChild(d.createTextNode(i));
+                r.appendChild(t);
+              } else {
+                t = d.getElementsByTagName("head")[0];
+                var i = d.createElement("div");
+                i.style.cssText =
+                  "z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;display: block !important;";
+                i.setAttribute("id", "_vis_opt_path_hides");
+                i.classList.add("_vis_hide_layer");
+                t.parentNode.insertBefore(i, t.nextSibling);
+              }
+              var o = window._vis_opt_url || d.URL,
+                s =
+                  "https://dev.visualwebsiteoptimizer.com/j.php?a=" +
+                  account_id +
+                  "&u=" +
+                  encodeURIComponent(o) +
+                  "&vn=" +
+                  version;
+              if (w.location.search.indexOf("_vwo_xhr") !== -1) {
+                this.addScript({ src: s });
+              } else {
+                this.load(s + "&x=true");
+              }
+            },
+          };
+          w._vwo_code = code;
+          code.init();
+        })();
+    </script>
+    <!-- End VWO Async SmartCode -->
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="logo">
-                <i class="fas fa-seedling"></i>
-                TreePlant
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#stats">Impact</a></li>
-                <li><a href="#help">Get Involved</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <nav class="nav">
+        <div class="logo">
+          <i class="fas fa-seedling"></i>
+          TreePlant
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#stats">Impact</a></li>
+          <li><a href="#help">Get Involved</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Plant Trees, Save Earth</h1>
-            <p>Join our global initiative to combat climate change and create a sustainable future for generations to come. Every tree planted makes a difference.</p>
-            <a href="#help" class="cta-button">Get Involved Today</a>
-        </div>
+      <div class="hero-content">
+        <h1>Plant Trees, Save Earth</h1>
+        <p>
+          Join our global initiative to combat climate change and create a
+          sustainable future for generations to come. Every tree planted makes a
+          difference.
+        </p>
+        <a href="#help" class="cta-button">Get Involved Today</a>
+      </div>
     </section>
 
     <!-- Main Content -->
     <div class="main-content">
-        <!-- Benefits Section -->
-        <section id="benefits" class="section">
-            <h2>Why Trees Matter</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card fade-in">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Clean Air</h3>
-                    <p>Trees absorb carbon dioxide and release oxygen, purifying the air we breathe and combating climate change.</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <i class="fas fa-tint"></i>
-                    <h3>Water Conservation</h3>
-                    <p>Trees help prevent soil erosion, filter water, and maintain the water cycle essential for all life.</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <i class="fas fa-home"></i>
-                    <h3>Wildlife Habitat</h3>
-                    <p>Trees provide shelter and food for countless species, maintaining biodiversity and ecosystem balance.</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <i class="fas fa-thermometer-half"></i>
-                    <h3>Temperature Control</h3>
-                    <p>Trees provide shade and cool the environment, reducing urban heat islands and energy consumption.</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <i class="fas fa-heart"></i>
-                    <h3>Mental Health</h3>
-                    <p>Green spaces and trees have been proven to reduce stress and improve overall mental well-being.</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <i class="fas fa-recycle"></i>
-                    <h3>Sustainable Future</h3>
-                    <p>Trees are renewable resources that provide materials for construction, paper, and other essential products.</p>
-                </div>
-            </div>
-        </section>
+      <!-- Benefits Section -->
+      <section id="benefits" class="section">
+        <h2>Why Trees Matter</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card fade-in">
+            <i class="fas fa-leaf"></i>
+            <h3>Clean Air</h3>
+            <p>
+              Trees absorb carbon dioxide and release oxygen, purifying the air
+              we breathe and combating climate change.
+            </p>
+          </div>
+          <div class="benefit-card fade-in">
+            <i class="fas fa-tint"></i>
+            <h3>Water Conservation</h3>
+            <p>
+              Trees help prevent soil erosion, filter water, and maintain the
+              water cycle essential for all life.
+            </p>
+          </div>
+          <div class="benefit-card fade-in">
+            <i class="fas fa-home"></i>
+            <h3>Wildlife Habitat</h3>
+            <p>
+              Trees provide shelter and food for countless species, maintaining
+              biodiversity and ecosystem balance.
+            </p>
+          </div>
+          <div class="benefit-card fade-in">
+            <i class="fas fa-thermometer-half"></i>
+            <h3>Temperature Control</h3>
+            <p>
+              Trees provide shade and cool the environment, reducing urban heat
+              islands and energy consumption.
+            </p>
+          </div>
+          <div class="benefit-card fade-in">
+            <i class="fas fa-heart"></i>
+            <h3>Mental Health</h3>
+            <p>
+              Green spaces and trees have been proven to reduce stress and
+              improve overall mental well-being.
+            </p>
+          </div>
+          <div class="benefit-card fade-in">
+            <i class="fas fa-recycle"></i>
+            <h3>Sustainable Future</h3>
+            <p>
+              Trees are renewable resources that provide materials for
+              construction, paper, and other essential products.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Statistics Section -->
-        <section id="stats" class="stats-section">
-            <div class="main-content">
-                <h2>Our Impact</h2>
-                <div class="stats-grid">
-                    <div class="stat-item fade-in">
-                        <div class="stat-number">50M+</div>
-                        <div class="stat-label">Trees Planted</div>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Countries</div>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <div class="stat-number">1M+</div>
-                        <div class="stat-label">Volunteers</div>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <div class="stat-number">25K</div>
-                        <div class="stat-label">Acres Restored</div>
-                    </div>
-                </div>
+      <!-- Statistics Section -->
+      <section id="stats" class="stats-section">
+        <div class="main-content">
+          <h2>Our Impact</h2>
+          <div class="stats-grid">
+            <div class="stat-item fade-in">
+              <div class="stat-number">50M+</div>
+              <div class="stat-label">Trees Planted</div>
             </div>
-        </section>
-
-        <!-- How to Help Section -->
-        <section id="help" class="section">
-            <h2>How You Can Help</h2>
-            <div class="help-grid">
-                <div class="help-card fade-in">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>Donate</h3>
-                    <p>Your financial contribution helps us plant more trees and maintain existing forests. Every dollar plants a tree.</p>
-                </div>
-                <div class="help-card fade-in">
-                    <i class="fas fa-users"></i>
-                    <h3>Volunteer</h3>
-                    <p>Join our local tree planting events. Get your hands dirty and make a direct impact in your community.</p>
-                </div>
-                <div class="help-card fade-in">
-                    <i class="fas fa-share-alt"></i>
-                    <h3>Spread Awareness</h3>
-                    <p>Share our mission on social media. Education is key to creating lasting environmental change.</p>
-                </div>
-                <div class="help-card fade-in">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h3>Attend Events</h3>
-                    <p>Participate in our workshops, seminars, and community events to learn more about environmental conservation.</p>
-                </div>
+            <div class="stat-item fade-in">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Countries</div>
             </div>
-        </section>
+            <div class="stat-item fade-in">
+              <div class="stat-number">1M+</div>
+              <div class="stat-label">Volunteers</div>
+            </div>
+            <div class="stat-item fade-in">
+              <div class="stat-number">25K</div>
+              <div class="stat-label">Acres Restored</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Get In Touch</h2>
-            <form class="contact-form fade-in">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Tell us how you'd like to get involved..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </section>
+      <!-- How to Help Section -->
+      <section id="help" class="section">
+        <h2>How You Can Help</h2>
+        <div class="help-grid">
+          <div class="help-card fade-in">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>Donate</h3>
+            <p>
+              Your financial contribution helps us plant more trees and maintain
+              existing forests. Every dollar plants a tree.
+            </p>
+          </div>
+          <div class="help-card fade-in">
+            <i class="fas fa-users"></i>
+            <h3>Volunteer</h3>
+            <p>
+              Join our local tree planting events. Get your hands dirty and make
+              a direct impact in your community.
+            </p>
+          </div>
+          <div class="help-card fade-in">
+            <i class="fas fa-share-alt"></i>
+            <h3>Spread Awareness</h3>
+            <p>
+              Share our mission on social media. Education is key to creating
+              lasting environmental change.
+            </p>
+          </div>
+          <div class="help-card fade-in">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Attend Events</h3>
+            <p>
+              Participate in our workshops, seminars, and community events to
+              learn more about environmental conservation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <h2>Get In Touch</h2>
+        <form class="contact-form fade-in">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Tell us how you'd like to get involved..."
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 TreePlant Initiative. All rights reserved.</p>
-            <p>Together, we can create a greener, more sustainable world.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
+      <div class="footer-content">
+        <p>&copy; 2024 TreePlant Initiative. All rights reserved.</p>
+        <p>Together, we can create a greener, more sustainable world.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
+      </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
+          }
+        });
+      });
+
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Form submission
+      document
+        .querySelector(".contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for your message! We'll get back to you soon.");
+          this.reset();
         });
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+      // Animated counter for statistics
+      function animateCounter(element, target, duration = 2000) {
+        let start = 0;
+        const increment = target / (duration / 16);
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            element.textContent = target + "+";
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(start) + "+";
+          }
+        }, 16);
+      }
+
+      // Trigger counter animation when stats section is visible
+      const statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const statNumbers = document.querySelectorAll(".stat-number");
+              statNumbers.forEach((stat) => {
+                const text = stat.textContent;
+                const number = parseInt(text.replace(/\D/g, ""));
+                if (number) {
+                  animateCounter(stat, number);
                 }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            this.reset();
-        });
-
-        // Animated counter for statistics
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16);
-            
-            const timer = setInterval(() => {
-                start += increment;
-                if (start >= target) {
-                    element.textContent = target + '+';
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(start) + '+';
-                }
-            }, 16);
-        }
-
-        // Trigger counter animation when stats section is visible
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumbers = document.querySelectorAll('.stat-number');
-                    statNumbers.forEach(stat => {
-                        const text = stat.textContent;
-                        const number = parseInt(text.replace(/\D/g, ''));
-                        if (number) {
-                            animateCounter(stat, number);
-                        }
-                    });
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const statsSection = document.querySelector('.stats-section');
-        if (statsSection) {
-            statsObserver.observe(statsSection);
-        }
-
-        // Add parallax effect to hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                const rate = scrolled * -0.5;
-                hero.style.transform = `translateY(${rate}px)`;
+              });
+              statsObserver.unobserve(entry.target);
             }
-        });
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      const statsSection = document.querySelector(".stats-section");
+      if (statsSection) {
+        statsObserver.observe(statsSection);
+      }
+
+      // Add parallax effect to hero section
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector(".hero");
+        if (hero) {
+          const rate = scrolled * -0.5;
+          hero.style.transform = `translateY(${rate}px)`;
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
